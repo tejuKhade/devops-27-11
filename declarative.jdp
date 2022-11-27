@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+    stages {
+    stage('build') {
+        steps {
+            git branch: 'main', credentialsId: 'tejaswini', url: 'https://github.com/tejuKhade/https---github.com-tejuukhade-repo_terraform.git'
+        }
+    }
+
+    stage('test') {
+        steps {
+            sh '''ls
+            pwd'''
+        }
+    }
+
+    stage('deploy') {
+        steps {
+            echo 'deployed'
+        }
+    }
+}
+}
