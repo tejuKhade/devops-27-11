@@ -1,6 +1,6 @@
 node {
   stage('pull-code') {
-    git credentialsId: 'tejaswini-git', url: 'https://github.com/tejuKhade/devops-27-11.git'
+    git branch: 'main', credentialsId: 'tejaswini', url: 'https://github.com/tejuKhade/devops-27-11.git'
   }
   stage('Test') {
    sh '''pwd
