@@ -10,7 +10,7 @@ pipeline {
         steps {
             echo "build no is ${env.BUILD_ID}"
             echo "branch on which git present ${env.GIT_BRANCH}"
-            echo "build no is ${env.NODE_NAME}"
+            echo "node name is ${env.NODE_NAME}"
 }
 }
     }
