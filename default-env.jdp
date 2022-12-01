@@ -9,7 +9,8 @@ pipeline {
     stage ('printenv') {
         steps {
             echo "build no is ${env.BUILD_ID}"
-            echo "link to access this server ${env.GIT_BRANCH}"
+            echo "branch on which git present ${env.GIT_BRANCH}"
+            echo "build no is ${env.NODE_NAME}"
 }
 }
     }
