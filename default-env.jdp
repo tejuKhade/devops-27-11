@@ -6,5 +6,8 @@ pipeline {
             sh 'printenv'
         }
     }
+    stage ('printenv') {
+        steps {
+            echo 'build no is $BUILD_ID'
 }
 }
