@@ -9,7 +9,7 @@ pipeline {
     stage ('printenv') {
         steps {
             echo "build no is ${env.BUILD_ID}"
-            echo "link to access this server ${env.JENKINS_URL}"
+            echo "link to access this server ${env.GIT_BRANCH}"
 }
 }
     }
