@@ -8,6 +8,6 @@ pipeline {
     }
     stage ('printenv') {
         steps {
-            echo "build no is {$env.BUILD_ID}"
+            echo "build no is ${env.BUILD_ID}"
 }
 }
