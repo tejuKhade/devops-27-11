@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+    stages {
+    stage('pull-code') {
+        steps {
+        git branch: 'main', credentialsId: 'tomcat-github', url: 'https://github.com/tejuKhade/18.10-repo.git'
+        }
+    }
+    stage('Build')
+        steps {
+            sh 'mvn clean package'
+        }
+    stages('deploy')
+        steps {
+            
+    }
+}
