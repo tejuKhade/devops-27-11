@@ -6,7 +6,7 @@ pipeline {
             git credentialsId: 'tejaswini', url: 'https://github.com/tejuKhade/18.10-repo.git'
         }
     }
-    stage('Build') {
+    stage('build') {
         steps {
             sh 'mvn clean package'
         }
