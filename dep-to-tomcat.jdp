@@ -3,7 +3,7 @@ pipeline {
     stages {
     stage('pull-code') {
         steps {
-        git branch: 'main', credentialsId: 'tomcat-github', url: 'https://github.com/tejuKhade/18.10-repo.git'
+        git credentialsId: 'tejaswini', url: 'https://github.com/tejuKhade/18.10-repo.git'
         }
     }
     stage('Build')
@@ -12,6 +12,7 @@ pipeline {
         }
     stages('deploy')
         steps {
-            
+          deploy adapters: [tomcat9(credentialsId: 'tomcat', path: '', url: 'http://3.86.26.140:8080/manager/html')], contextPath: '/root', war: '**/*.war'  
     }
+}
 }
